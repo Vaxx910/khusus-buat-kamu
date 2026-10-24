@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khusus Buat Kamu, Najwa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #090d16;
+      color: #f8fafc;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(244, 63, 94, 0.2);
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(244, 63, 94, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .step {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .step.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .text-message {
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #ffe4e6;
+      text-shadow: 0 2px 8px rgba(244, 63, 94, 0.3);
+    }
+    .btn-neon {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(244, 63, 94, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      align-self: center;
+    }
+    .btn-neon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(244, 63, 94, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-accept {
+      background: linear-gradient(135deg, #10b981, #059669);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+    }
+    .btn-accept:hover {
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.9);
+    }
+    .btn-reject {
+      background: linear-gradient(135deg, #64748b, #475569);
+      box-shadow: 0 0 10px rgba(100, 116, 139, 0.4);
+    }
+    .final-message {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #34d399;
+      line-height: 1.5;
+      text-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Step 1 -->
+    <div id="step-1" class="step active">
+      <div class="text-message">HAII NAJWA, INI WEB KHUSUS BUAT KAMU</div>
+      <button class="btn-neon" onclick="nextStep(1)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step-2" class="step">
+      <div class="text-message">NAJWA, KAMU ORANG PERTAMA YANG BIKIN AKU JATUH CINTA SEDALAM INI</div>
+      <button class="btn-neon" onclick="nextStep(2)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step-3" class="step">
+      <div class="text-message">DAN KAMU JUGA ORANG PERTAMA YANG BIKIN SAYA PERTAMA KALI SESAYANG INI SAMA ORANG</div>
+      <button class="btn-neon" onclick="nextStep(3)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div id="step-4" class="step">
+      <div class="text-message">KAMU JUGA ORANG PERTAMA YANG BIKIN SAYA SETERTARIK INI DENGAN CINTA</div>
+      <button class="btn-neon" onclick="nextStep(4)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 5 -->
+    <div id="step-5" class="step">
+      <div class="text-message">SAYA SUKA KAMU DARI SIFAT MU YANG LUCU DAN GAMPANG MARAH</div>
+      <button class="btn-neon" onclick="nextStep(5)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 6 -->
+    <div id="step-6" class="step">
+      <div class="text-message">KAMU PEREMPUAN PALING CANTIK SETELAH IBUKU</div>
+      <button class="btn-neon" onclick="nextStep(6)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 7 -->
+    <div id="step-7" class="step">
+      <div class="text-message">KAMU JUGA ORANG PALING LUCU YANG PERNAH KUTEMUI</div>
+      <button class="btn-neon" onclick="nextStep(7)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 8 -->
+    <div id="step-8" class="step">
+      <div class="text-message">INI KEDUA KALINYA SAYA JATUH CINTA KEPADAMU</div>
+      <button class="btn-neon" onclick="nextStep(8)">KLIK DISINI</button>
+    </div>
+
+    <!-- Step 9 (Pertanyaan Utama & Pilihan) -->
+    <div id="step-9" class="step">
+      <div class="text-message">KAMU MAU GA JADI PACAR SAYA? SAYA GA MAKSA KOK, KALO KAMU GAMAU GPP TAPI KALO KAMU MAU SAYA BAHAGIA BANGET BISA PACARIN WANITA PALING CANTIK DAN LUCU YANG PALING SAYA SUKA</div>
+      <div class="btn-group">
+        <button class="btn-neon btn-accept" onclick="sendAnswer('TERIMA ❤️')">TERIMA</button>
+        <button class="btn-neon btn-reject" onclick="sendAnswer('TOLAK 💔')">TOLAK</button>
+      </div>
+    </div>
+
+    <!-- Step 10 (Final) -->
+    <div id="step-10" class="step">
+      <div class="final-message">TERIMAKASIH TELAH MENJAWAB, AKU TUNGGU JAWABAN MU WAHAI PUJAAN HATIKU</div>
+    </div>
+
+  </div>
+
+  <script>
+    // KONFIGURASI TELEGRAM BOT KAMU DI SINI
+    const TELEGRAM_BOT_TOKEN = '8993484744:AAG8vtKU0JO0GJId3VsgixDsq_j7UaQYfxI';
+    const TELEGRAM_CHAT_ID = '8664741564';
+
+    function nextStep(current) {
+      const currentEl = document.getElementById(`step-${current}`);
+      const nextEl = document.getElementById(`step-${current + 1}`);
+
+      currentEl.classList.remove('active');
+      setTimeout(() => {
+        nextEl.classList.add('active');
+      }, 300);
+    }
+
+    async function sendAnswer(answer) {
+      // Pindah ke tampilan akhir
+      document.getElementById('step-9').classList.remove('active');
+      setTimeout(() => {
+        document.getElementById('step-10').classList.add('active');
+      }, 300);
+
+      // Kirim data ke Bot Telegram
+      const message = `✨ Jawaban dari Najwa:\n\n*${answer}*`;
+      const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+      try {
+        await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
+          })
+        });
+      } catch (error) {
+        console.error('Gagal mengirim ke Telegram:', error);
+      }
+    }
+  </script>
+</body>
+</html>
